@@ -10,10 +10,12 @@
             <asp:Label ID="AlbumIdLabel1" runat="server" Text='<%# Item.AlbumId %>' />
             <br />
             Genre:
-            <asp:DropDownList runat="server" SelectMethod="GetGenres" DataTextField="Name" DataValueField="GenreId" ID="Genre" SelectedValue="<%# Item.GenreId %>"  />
+            <asp:DropDownList runat="server" SelectMethod="GetGenres" DataTextField="Name" 
+                DataValueField="GenreId" ID="Genre" SelectedValue="<%# Item.GenreId %>"  />
             <br />
             Artist:
-            <asp:DropDownList runat="server" SelectMethod="GetArtists" DataTextField="Name" DataValueField="ArtistId" ID="Artist" SelectedValue="<%# Item.ArtistId %>"  />
+            <asp:DropDownList runat="server" SelectMethod="GetArtists" DataTextField="Name" 
+                DataValueField="ArtistId" ID="Artist" SelectedValue="<%# Item.ArtistId %>"  />
             <br />
             Title:
             <asp:TextBox ID="TitleTextBox" runat="server" Text='<%# Item.Title %>' />
