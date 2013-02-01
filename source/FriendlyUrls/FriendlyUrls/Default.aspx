@@ -14,10 +14,4 @@
             </li>
         </ItemTemplate>
     </asp:ListView>
-
-    <video controls="controls">
-        <source src="file.mp4" type="video/mp4" />
-        <source src="file.webm" type="video/webm" />
-        <source src="file.ogv" type="video/ogg" />
-    </video>
 </asp:Content>
