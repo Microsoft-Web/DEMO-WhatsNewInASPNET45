@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace WebFormsMusicStore.Models
 {
-    public class SampleData : DropCreateDatabaseAlways<MusicStoreEntities>
+    public class SampleData : DropCreateDatabaseIfModelChanges<MusicStoreEntities>
     {
         protected override void Seed(MusicStoreEntities context)
         {
@@ -23,7 +23,6 @@ namespace WebFormsMusicStore.Models
         {
             context.Albums.Add(new Album { Title = "The Best Of The Men At Work", Genre = genres.Single(g => g.Name == "Pop"), Price = 8.99M, Artist = artists.Single(a => a.Name == "Men At Work"), AlbumArtUrl = imgUrl });
             context.Albums.Add(new Album { Title = "...And Justice For All", Genre = genres.Single(g => g.Name == "Metal"), Price = 8.99M, Artist = artists.Single(a => a.Name == "Metallica"), AlbumArtUrl = imgUrl });
-            context.Albums.Add(new Album { Title = "עד גבול האור", Genre = genres.Single(g => g.Name == "World"), Price = 8.99M, Artist = artists.Single(a => a.Name == "אריק אינשטיין"), AlbumArtUrl = imgUrl });
             context.Albums.Add(new Album { Title = "Black Light Syndrome", Genre = genres.Single(g => g.Name == "Rock"), Price = 8.99M, Artist = artists.Single(a => a.Name == "Terry Bozzio, Tony Levin & Steve Stevens"), AlbumArtUrl = imgUrl });
             context.Albums.Add(new Album { Title = "10,000 Days", Genre = genres.Single(g => g.Name == "Rock"), Price = 8.99M, Artist = artists.Single(a => a.Name == "Tool"), AlbumArtUrl = imgUrl });
             context.Albums.Add(new Album { Title = "11i", Genre = genres.Single(g => g.Name == "Electronic"), Price = 8.99M, Artist = artists.Single(a => a.Name == "Supreme Beings of Leisure"), AlbumArtUrl = imgUrl });
